@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/* ─────────────────────────────────────────
+   2. FLEXBOX — PASO 1
+   Activar Flexbox en el menú de navegación
+
+   display: flex  → pone los elementos en FILA
+   gap            → espacio entre elementos
+   ───────────────────────────────────────── */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* ─────────────────────────────────────────
+   3. FLEXBOX — PASO 2
+   Tarjetas en fila y que pasen de línea
+   cuando no quepan en pantalla
+
+   display: flex       → activa flexbox
+   flex-wrap: wrap     → si no caben, bajan
+   gap                 → espacio entre tarjetas
+   ───────────────────────────────────────── */
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tarjeta {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+
+  /* flex: 1 1 200px
+     → cada tarjeta ocupa mínimo 200px
+     → y puede crecer para llenar el espacio */
+  flex: 1 1 200px;
+}
+
+
+/* ─────────────────────────────────────────
+   4. FLEXBOX — PASO 3
+   justify-content y align-items
+
+   justify-content → alinea en horizontal →
+   align-items     → alinea en vertical   ↕
+   ───────────────────────────────────────── */
+.contenedor-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contenedor-galeria img {
+  width: 250px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 6px;
+}
